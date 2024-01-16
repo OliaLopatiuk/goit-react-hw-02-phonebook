@@ -1,4 +1,5 @@
 import {Contact, Button, ListItem} from './ContactList.styled'
+import PropTypes from 'prop-types';
 
 const ContactList = ({contacts, onClick}) => (
 
@@ -9,3 +10,8 @@ const ContactList = ({contacts, onClick}) => (
 
 export default ContactList;
 
+
+ContactList.propTypes = {
+      contacts: PropTypes.arrayOf(PropTypes.object),
+      onClick: PropTypes.func,
+}

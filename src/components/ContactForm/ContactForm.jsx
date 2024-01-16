@@ -1,7 +1,12 @@
 import { Component } from "react";
 import {Form, Label, Input} from './ContactForm.styled'
+import PropTypes from 'prop-types';
 
 export class ContactForm extends Component {
+    static propTypes = {
+        onSubmit: PropTypes.func,
+    }
+    
     state = {
         name: '',
         number: '',
